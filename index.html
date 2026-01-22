@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Los Tacos | Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="hero">
+    <div class="hero__content">
+      <p class="eyebrow">Food by Los Tacos · IG: lostacosbk</p>
+      <h1 class="handwrite-title">Mezquila Bar & Restaurant</h1>
+      <h2 class="menu-title">
+        Food <span>Menu</span>
+      </h2>
+      <p class="subhead">Handmade tortillas, slow-braised meats, and coastal mariscos.</p>
+      <div class="hero__chips">
+        <span>Handmade tortillas</span>
+        <span>Slow-braised meats</span>
+        <span>Coastal mariscos</span>
+      </div>
+      <div class="menu-jump">
+        <span class="menu-jump__label">Jump to category</span>
+        <button class="menu-jump__trigger" type="button" aria-haspopup="dialog" aria-controls="menu-overlay">
+          Open menu
+        </button>
+      </div>
+    </div>
+    <div class="hero__frames">
+      <figure class="frame reveal" data-delay="0">
+        <img src="assets/menu-page-1.jpg" alt="Menu page one" />
+      </figure>
+      <figure class="frame reveal" data-delay="120">
+        <img src="assets/menu-page-2.jpg" alt="Menu page two" />
+      </figure>
+    </div>
+  </header>
+
+  <main>
+    <section class="menu-block reveal" data-delay="0" id="tacos">
+      <div class="menu-block__header">
+        <h2>Tacos <span>(3 per order)</span></h2>
+        <p>100% corn nixtamal tortillas with fresh onions, cilantro, and salsa on the side.</p>
+      </div>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <h3>Al Pastor</h3>
+          <p>Guajillo-marinated pork with grilled pineapple and avocado salsa.</p>
+          <span>$13.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Asada</h3>
+          <p>Dry chile marinated steak with salsa roja.</p>
+          <span>$14.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Pollo</h3>
+          <p>Ancho chile marinated chicken with salsa verde.</p>
+          <span>$13.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Chorizo con Chicharrón</h3>
+          <p>Mexican chorizo with crispy pork skin, black beans, salsa verde.</p>
+          <span>$13.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Carnitas</h3>
+          <p>Slow braised pork with salsa roja.</p>
+          <span>$13.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Suadero</h3>
+          <p>Slow-cooked beef brisket with salsa picante.</p>
+          <span>$14.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Champiñones</h3>
+          <p>Sauteed mushrooms with onions, jalapeños, salsa verde.</p>
+          <span>$13.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Champiñones al Pastor</h3>
+          <p>Achiote mushrooms with grilled pineapple, avocado salsa.</p>
+          <span>$13.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Lengua</h3>
+          <p>Slow braised beef tongue with salsa roja.</p>
+          <span>$14.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Taco Árabe <span class="note">(1 per serving)</span></h3>
+          <p>Thin sliced pork on flour tortilla with sour cream, lime onions, salsa picante.</p>
+          <span>$7.00</span>
+        </article>
+      </div>
+      <div class="photo-strip">
+        <div class="photo-placeholder">Food image coming soon</div>
+        <div class="photo-placeholder">Food image coming soon</div>
+        <div class="photo-placeholder">Food image coming soon</div>
+      </div>
+    </section>
+
+    <section class="menu-block split reveal" data-delay="80" id="birria">
+      <div>
+        <div class="menu-block__header">
+          <h2>Birria Lovers <span>$16.95</span></h2>
+          <p>Slow-braised guajillo birria, served with salsa verde on the side.</p>
+        </div>
+        <div class="menu-grid">
+          <article class="menu-item">
+            <h3>Tacos de Birria</h3>
+            <p>Corn tortilla tacos topped with onion, cilantro, and salsa verde.</p>
+          </article>
+          <article class="menu-item">
+            <h3>Quesabirria</h3>
+            <p>10" flour tortilla with melted mozzarella and birria.</p>
+          </article>
+          <article class="menu-item">
+            <h3>Torta Birria</h3>
+            <p>Toasted Portuguese roll, Oaxaca cheese, onions, cilantro.</p>
+          </article>
+          <article class="menu-item">
+            <h3>Birria Burrito</h3>
+            <p>Birria, black beans, rice, Oaxaca cheese, onions, cilantro.</p>
+          </article>
+        </div>
+      </div>
+      <div class="photo-placeholder tall">Food image coming soon</div>
+    </section>
+
+    <section class="menu-block reveal" data-delay="0" id="mariscos">
+      <div class="menu-block__header">
+        <h2>Mariscos</h2>
+        <p>Coastal flavors with bright lime, serrano, and cilantro.</p>
+      </div>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <h3>Shrimp Aguachile Verde</h3>
+          <p>Raw shrimp in spicy lime juice, serranos, cucumber, cilantro.</p>
+          <span>$18.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Shrimp Aguachile Rojo</h3>
+          <p>Raw shrimp in spicy lime juice, cucumber, chile chiltepin.</p>
+          <span>$18.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Shrimp Aguachile Negro</h3>
+          <p>Raw shrimp in spicy lime juice, tomatillo, chile chiltepin.</p>
+          <span>$18.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Fish Ceviche (Tostada)</h3>
+          <p>Mahi-mahi in lime juice, serrano, cucumber, red onion, salsa macha.</p>
+          <span>$8.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Tacos de Camarón</h3>
+          <p>Crispy shrimp with chipotle mayo, cilantro, sliced carrots.</p>
+          <span>$14.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Fish Tacos</h3>
+          <p>Crispy fish with chipotle mayo, sliced carrots, salsa.</p>
+          <span>$14.95</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="menu-block split reveal" data-delay="80" id="appetizers">
+      <div>
+        <div class="menu-block__header">
+          <h2>Appetizers</h2>
+          <p>Perfect to share while the mezcal pours.</p>
+        </div>
+        <div class="menu-grid">
+          <article class="menu-item">
+            <h3>Guacamole</h3>
+            <p>Traditional homemade style with cilantro, onions, tomatoes, jalapeños.</p>
+            <span>$13.95</span>
+          </article>
+          <article class="menu-item">
+            <h3>Flautas de Pollo <span class="note">(2 per order)</span></h3>
+            <p>Topped with sour cream, cotija, salsa verde, salsa roja.</p>
+            <span>$10.95</span>
+          </article>
+          <article class="menu-item">
+            <h3>Sopa de Tortilla</h3>
+            <p>With grilled chicken, tortilla strips, Oaxaca cheese, guajillo chiles.</p>
+            <span>$10.95</span>
+          </article>
+          <article class="menu-item">
+            <h3>Queso Fundido con Chorizo</h3>
+            <p>Oaxaca & Chihuahua cheeses with chorizo and tomatillo serrano salsa.</p>
+            <span>$14.95</span>
+          </article>
+          <article class="menu-item">
+            <h3>Quesadillas</h3>
+            <p>10" flour tortilla with Chihuahua cheese + choice of filling.</p>
+            <span>$14.95</span>
+          </article>
+          <article class="menu-item">
+            <h3>Nachos</h3>
+            <p>Layered chips with protein, black beans, Chihuahua cheese, pico de gallo.</p>
+            <span>$14.95</span>
+          </article>
+        </div>
+        <p class="menu-footnote">Quesadilla fillings: chicharrón, hongos, steak, pollo. Nacho proteins: steak, hongos, chorizo, pollo.</p>
+      </div>
+      <div class="photo-placeholder tall">Food image coming soon</div>
+    </section>
+
+    <section class="menu-block reveal" data-delay="0" id="entrees">
+      <div class="menu-block__header">
+        <h2>Entrees</h2>
+        <p>Served with a side of house rice and beans.</p>
+      </div>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <h3>Enchiladas Suizas</h3>
+          <p>Grilled shrimp filled tortillas, creamy tomatillo sauce, mozzarella, Oaxaca.</p>
+          <span>$23.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Enchiladas Rojas</h3>
+          <p>Chicken, salsa ranchera, lettuce, crema, cotija, cilantro.</p>
+          <span>$21.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Enchiladas de Mole</h3>
+          <p>Chicken, mole poblano, crema, cotija, sesame seeds.</p>
+          <span>$22.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Enchiladas Vegetarianas</h3>
+          <p>Zucchini, eggplant, peppers, salsa verde, crema, radishes.</p>
+          <span>$19.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Mar y Tierra a la Mexicana</h3>
+          <p>Steak and jumbo shrimp with jalapeños, tomatoes, onions, queso.</p>
+          <span>$24.95</span>
+        </article>
+      </div>
+      <div class="photo-strip">
+        <div class="photo-placeholder">Food image coming soon</div>
+        <div class="photo-placeholder">Food image coming soon</div>
+      </div>
+    </section>
+
+    <section class="menu-block split reveal" data-delay="80" id="fajitas">
+      <div>
+        <div class="menu-block__header">
+          <h2>Fajitas</h2>
+          <p>Sauteed bell peppers and onions, served with flour tortillas, rice, beans.</p>
+        </div>
+        <div class="menu-grid">
+          <article class="menu-item">
+            <h3>Shrimp Fajita</h3>
+            <span>$23.95</span>
+          </article>
+          <article class="menu-item">
+            <h3>Steak</h3>
+            <span>$23.95</span>
+          </article>
+          <article class="menu-item">
+            <h3>Pollo Fajita</h3>
+            <span>$21.95</span>
+          </article>
+          <article class="menu-item">
+            <h3>Vegetales</h3>
+            <span>$20.95</span>
+          </article>
+        </div>
+      </div>
+      <div class="photo-placeholder tall">Food image coming soon</div>
+    </section>
+
+    <section class="menu-block reveal" data-delay="0" id="burritos">
+      <div class="menu-block__header">
+        <h2>Burritos <span>$15.95</span></h2>
+        <p>Rice, beans, romaine lettuce, pico de gallo, salsa, crema, cotija.</p>
+      </div>
+      <div class="menu-grid compact">
+        <article class="menu-item"><h3>Pastor</h3></article>
+        <article class="menu-item"><h3>Camarón</h3></article>
+        <article class="menu-item"><h3>Pollo</h3></article>
+        <article class="menu-item"><h3>Asada</h3></article>
+        <article class="menu-item"><h3>Vegetariano</h3></article>
+      </div>
+    </section>
+
+    <section class="menu-block reveal" data-delay="0" id="tortas">
+      <div class="menu-block__header">
+        <h2>Tortas <span>$15.95</span></h2>
+        <p>Toasted Portuguese roll with chipotle mayo, black beans, avocado, Chihuahua cheese.</p>
+      </div>
+      <div class="menu-grid compact">
+        <article class="menu-item"><h3>Pastor</h3></article>
+        <article class="menu-item"><h3>Pollo</h3></article>
+        <article class="menu-item"><h3>Steak</h3></article>
+        <article class="menu-item"><h3>Vegetariana</h3></article>
+      </div>
+    </section>
+
+    <section class="menu-block split reveal" data-delay="80" id="sides">
+      <div>
+        <div class="menu-block__header">
+          <h2>Sides</h2>
+          <p>Little extras to round out the table.</p>
+        </div>
+        <div class="menu-grid compact">
+          <article class="menu-item">
+            <h3>Pico de Gallo</h3>
+            <span>$9.95</span>
+          </article>
+          <article class="menu-item">
+            <h3>Chile Seasoned Fries</h3>
+            <span>$9.95</span>
+          </article>
+          <article class="menu-item">
+            <h3>Plátanos Fritos</h3>
+            <span>$9.95</span>
+          </article>
+          <article class="menu-item">
+            <h3>Rice or Beans</h3>
+            <span>$4.00</span>
+          </article>
+        </div>
+      </div>
+      <div class="photo-placeholder tall">Food image coming soon</div>
+    </section>
+
+    <section class="menu-block reveal" data-delay="0" id="desserts">
+      <div class="menu-block__header">
+        <h2>Desserts <span>$9.95</span></h2>
+        <p>Sweet finishes straight from the kitchen.</p>
+      </div>
+      <div class="menu-grid compact">
+        <article class="menu-item"><h3>Tres Leches</h3></article>
+        <article class="menu-item"><h3>Flan</h3></article>
+        <article class="menu-item"><h3>Churros</h3></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Menu visuals sourced from house menu photography. Prices and items subject to change.</p>
+  </footer>
+
+  <div class="menu-overlay" id="menu-overlay" aria-hidden="true">
+    <div class="menu-overlay__sheet" role="dialog" aria-modal="true" aria-labelledby="menu-overlay-title">
+      <div class="menu-overlay__header">
+        <h2 id="menu-overlay-title">Choose a category</h2>
+        <button class="menu-overlay__close" type="button" aria-label="Close menu">Close</button>
+      </div>
+      <nav class="menu-overlay__list">
+        <button type="button" data-target="#tacos">Tacos</button>
+        <button type="button" data-target="#birria">Birria Lovers</button>
+        <button type="button" data-target="#mariscos">Mariscos</button>
+        <button type="button" data-target="#appetizers">Appetizers</button>
+        <button type="button" data-target="#entrees">Entrees</button>
+        <button type="button" data-target="#fajitas">Fajitas</button>
+        <button type="button" data-target="#burritos">Burritos</button>
+        <button type="button" data-target="#tortas">Tortas</button>
+        <button type="button" data-target="#sides">Sides</button>
+        <button type="button" data-target="#desserts">Desserts</button>
+      </nav>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
