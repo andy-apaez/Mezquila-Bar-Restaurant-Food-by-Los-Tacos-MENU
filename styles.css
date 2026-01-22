@@ -125,37 +125,45 @@ body.menu-open {
 }
 
 .menu-jump {
-  display: grid;
-  gap: 0.6rem;
-  max-width: 280px;
-}
-
-.menu-jump__label {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: rgba(45, 36, 31, 0.7);
+  position: fixed;
+  top: max(1.2rem, env(safe-area-inset-top));
+  right: max(1.2rem, env(safe-area-inset-right));
+  z-index: 20;
+  pointer-events: auto;
 }
 
 .menu-jump__trigger {
   appearance: none;
-  border: 1px solid rgba(201, 164, 136, 0.6);
-  border-radius: 999px;
-  padding: 0.7rem 1.4rem;
-  background-color: rgba(255, 255, 255, 0.85);
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-weight: 600;
-  font-size: 0.85rem;
-  color: var(--ink);
-  box-shadow: 0 10px 20px rgba(45, 36, 31, 0.08);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid rgba(177, 63, 45, 0.45);
+  background-color: #fff6ea;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cpath d='M10 36c0-10 10-20 22-20s22 10 22 20' fill='none' stroke='%23b13f2d' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M16 36c4 6 28 6 32 0' fill='none' stroke='%234a6b45' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='24' cy='30' r='2' fill='%23b13f2d'/%3E%3Ccircle cx='32' cy='28' r='2' fill='%23b13f2d'/%3E%3Ccircle cx='40' cy='30' r='2' fill='%23b13f2d'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+  box-shadow: 0 12px 22px rgba(45, 36, 31, 0.16);
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: taco-drop 0.9s cubic-bezier(0.22, 0.9, 0.2, 1) 0.1s both;
 }
 
 .menu-jump__trigger:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 26px rgba(45, 36, 31, 0.12);
+  transform: translateY(-2px) rotate(-3deg);
+  box-shadow: 0 16px 28px rgba(45, 36, 31, 0.2);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .hero__frames {
@@ -442,11 +450,13 @@ main {
   }
 
   .menu-jump {
-    max-width: 100%;
+    top: 0.9rem;
+    right: 0.9rem;
   }
 
   .menu-jump__trigger {
-    width: 100%;
+    width: 50px;
+    height: 50px;
   }
 
   .menu-block__header h2 {
@@ -534,6 +544,10 @@ main {
   .menu-overlay__list button {
     transition: none;
   }
+
+  .menu-jump__trigger {
+    animation: none;
+  }
 }
 
 @keyframes write-reveal {
@@ -555,5 +569,20 @@ main {
   to {
     left: calc(100% - 0.5rem);
     opacity: 0;
+  }
+}
+
+@keyframes taco-drop {
+  0% {
+    transform: translateY(-18px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(6px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
