@@ -72,3 +72,33 @@ document.addEventListener("keydown", (event) => {
     toggleMenu(false);
   }
 });
+
+const qrInput = document.querySelector("#qr-input");
+const qrButton = document.querySelector("#qr-generate");
+const qrImage = document.querySelector("#qr-image");
+const qrPreview = document.querySelector(".qr-preview");
+
+const updateQr = () => {
+  if (!qrInput || !qrImage || !qrPreview) return;
+  const value = qrInput.value.trim();
+  if (!value) {
+    qrImage.removeAttribute("src");
+    qrPreview.classList.remove("has-code");
+    return;
+  }
+  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(value)}`;
+  qrImage.src = qrUrl;
+  qrPreview.classList.add("has-code");
+};
+
+if (qrButton) {
+  qrButton.addEventListener("click", updateQr);
+}
+
+if (qrInput) {
+  qrInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      updateQr();
+    }
+  });
+}

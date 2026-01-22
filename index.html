@@ -13,12 +13,12 @@
   <div class="grain"></div>
   <div class="menu-jump">
     <button class="menu-jump__trigger" type="button" aria-haspopup="dialog" aria-controls="menu-overlay" aria-label="Open menu">
-      <span class="visually-hidden">Open menu</span>
+      <span class="menu-jump__text">View menu</span>
     </button>
   </div>
   <header class="hero">
     <div class="hero__content">
-      <p class="eyebrow">Food by Los Tacos · IG: lostacosbk</p>
+      <p class="eyebrow">Food by Los Tacos · IG: <a href="https://www.instagram.com/lostacosbk/">@lostacosbk</a></a></p>
       <h1 class="handwrite-title">Mezquila Bar & Restaurant</h1>
       <h2 class="menu-title">
         Food <span>Menu</span>
@@ -345,6 +345,24 @@
         <article class="menu-item"><h3>Tres Leches</h3></article>
         <article class="menu-item"><h3>Flan</h3></article>
         <article class="menu-item"><h3>Churros</h3></article>
+      </div>
+    </section>
+
+    <section class="menu-block qr-block reveal" data-delay="0" id="qr">
+      <div class="menu-block__header">
+        <h2>Share the Menu</h2>
+        <p>Generate a QR code for this menu or any link you want to share.</p>
+      </div>
+      <div class="qr-generator">
+        <label for="qr-input">Link or text</label>
+        <div class="qr-generator__controls">
+          <input id="qr-input" type="text" placeholder="https://example.com/menu" />
+          <button type="button" id="qr-generate">Generate QR</button>
+        </div>
+        <div class="qr-preview" aria-live="polite">
+          <img id="qr-image" alt="QR code preview" />
+          <p class="qr-hint">Enter a link above to preview a QR code.</p>
+        </div>
       </div>
     </section>
   </main>
