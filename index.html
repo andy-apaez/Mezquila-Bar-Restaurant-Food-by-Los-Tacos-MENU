@@ -32,13 +32,21 @@
     </div>
     <div class="hero__frames">
       <figure class="frame reveal" data-delay="0">
-        <img src="assets/menu-page-1.jpg" alt="Menu page one" />
+        <img src="Timages/birria.png" alt="Menu page one" />
       </figure>
       <figure class="frame reveal" data-delay="120">
-        <img src="assets/menu-page-2.jpg" alt="Menu page two" />
+        <img src="Timages/menu-page-2.jpg" alt="Menu page two" />
       </figure>
     </div>
   </header>
+
+  <nav class="sticky-nav" aria-label="Quick sections">
+    <button type="button" data-target="#tacos">Tacos</button>
+    <button type="button" data-target="#mariscos">Mariscos</button>
+    <button type="button" data-target="#entrees">Entrees</button>
+    <button type="button" data-target="#burritos">Burritos</button>
+    <button type="button" data-target="#desserts">Desserts</button>
+  </nav>
 
   <main>
     <section class="menu-block reveal" data-delay="0" id="tacos">
@@ -46,6 +54,9 @@
         <h2>Tacos <span>(3 per order)</span></h2>
         <p>100% corn nixtamal tortillas with fresh onions, cilantro, and salsa on the side.</p>
       </div>
+      <figure class="section-hero">
+        <img src="Images/tacocircle.png" alt="Assorted tacos on handmade tortillas" />
+      </figure>
       <div class="menu-grid">
         <article class="menu-item">
           <h3>Al Pastor</h3>
@@ -98,39 +109,34 @@
           <span>$7.00</span>
         </article>
       </div>
-      <div class="photo-strip">
-        <div class="photo-placeholder">Food image coming soon</div>
-        <div class="photo-placeholder">Food image coming soon</div>
-        <div class="photo-placeholder">Food image coming soon</div>
-      </div>
     </section>
 
-    <section class="menu-block split reveal" data-delay="80" id="birria">
-      <div>
-        <div class="menu-block__header">
-          <h2>Birria Lovers <span>$16.95</span></h2>
-          <p>Slow-braised guajillo birria, served with salsa verde on the side.</p>
-        </div>
-        <div class="menu-grid">
-          <article class="menu-item">
-            <h3>Tacos de Birria</h3>
-            <p>Corn tortilla tacos topped with onion, cilantro, and salsa verde.</p>
-          </article>
-          <article class="menu-item">
-            <h3>Quesabirria</h3>
-            <p>10" flour tortilla with melted mozzarella and birria.</p>
-          </article>
-          <article class="menu-item">
-            <h3>Torta Birria</h3>
-            <p>Toasted Portuguese roll, Oaxaca cheese, onions, cilantro.</p>
-          </article>
-          <article class="menu-item">
-            <h3>Birria Burrito</h3>
-            <p>Birria, black beans, rice, Oaxaca cheese, onions, cilantro.</p>
-          </article>
-        </div>
+    <section class="menu-block reveal" data-delay="80" id="birria">
+      <div class="menu-block__header">
+        <h2>Birria Lovers <span>$16.95</span></h2>
+        <p>Slow-braised guajillo birria, served with salsa verde on the side.</p>
       </div>
-      <div class="photo-placeholder tall">Food image coming soon</div>
+      <figure class="section-hero">
+        <img src="Images/birria.png" alt="Birria tacos served with consommé" />
+      </figure>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <h3>Tacos de Birria</h3>
+          <p>Corn tortilla tacos topped with onion, cilantro, and salsa verde.</p>
+        </article>
+        <article class="menu-item">
+          <h3>Quesabirria</h3>
+          <p>10" flour tortilla with melted mozzarella and birria.</p>
+        </article>
+        <article class="menu-item">
+          <h3>Torta Birria</h3>
+          <p>Toasted Portuguese roll, Oaxaca cheese, onions, cilantro.</p>
+        </article>
+        <article class="menu-item">
+          <h3>Birria Burrito</h3>
+          <p>Birria, black beans, rice, Oaxaca cheese, onions, cilantro.</p>
+        </article>
+      </div>
     </section>
 
     <section class="menu-block reveal" data-delay="0" id="mariscos">
@@ -138,6 +144,9 @@
         <h2>Mariscos</h2>
         <p>Coastal flavors with bright lime, serrano, and cilantro.</p>
       </div>
+      <figure class="section-hero">
+        <img src="Images/ChatGPT%20Image%20Jan%2022,%202026,%2003_33_03%20AM.png" alt="Mariscos platter with lime and herbs" />
+      </figure>
       <div class="menu-grid">
         <article class="menu-item">
           <h3>Shrimp Aguachile Verde</h3>
@@ -172,47 +181,47 @@
       </div>
     </section>
 
-    <section class="menu-block split reveal" data-delay="80" id="appetizers">
-      <div>
-        <div class="menu-block__header">
-          <h2>Appetizers</h2>
-          <p>Perfect to share while the mezcal pours.</p>
-        </div>
-        <div class="menu-grid">
-          <article class="menu-item">
-            <h3>Guacamole</h3>
-            <p>Traditional homemade style with cilantro, onions, tomatoes, jalapeños.</p>
-            <span>$13.95</span>
-          </article>
-          <article class="menu-item">
-            <h3>Flautas de Pollo <span class="note">(2 per order)</span></h3>
-            <p>Topped with sour cream, cotija, salsa verde, salsa roja.</p>
-            <span>$10.95</span>
-          </article>
-          <article class="menu-item">
-            <h3>Sopa de Tortilla</h3>
-            <p>With grilled chicken, tortilla strips, Oaxaca cheese, guajillo chiles.</p>
-            <span>$10.95</span>
-          </article>
-          <article class="menu-item">
-            <h3>Queso Fundido con Chorizo</h3>
-            <p>Oaxaca & Chihuahua cheeses with chorizo and tomatillo serrano salsa.</p>
-            <span>$14.95</span>
-          </article>
-          <article class="menu-item">
-            <h3>Quesadillas</h3>
-            <p>10" flour tortilla with Chihuahua cheese + choice of filling.</p>
-            <span>$14.95</span>
-          </article>
-          <article class="menu-item">
-            <h3>Nachos</h3>
-            <p>Layered chips with protein, black beans, Chihuahua cheese, pico de gallo.</p>
-            <span>$14.95</span>
-          </article>
-        </div>
-        <p class="menu-footnote">Quesadilla fillings: chicharrón, hongos, steak, pollo. Nacho proteins: steak, hongos, chorizo, pollo.</p>
+    <section class="menu-block reveal" data-delay="80" id="appetizers">
+      <div class="menu-block__header">
+        <h2>Appetizers</h2>
+        <p>Perfect to share while the mezcal pours.</p>
       </div>
-      <div class="photo-placeholder tall">Food image coming soon</div>
+      <figure class="section-hero">
+        <img src="Images/burrito.png" alt="Burrito with salsa and crema" />
+      </figure>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <h3>Guacamole</h3>
+          <p>Traditional homemade style with cilantro, onions, tomatoes, jalapeños.</p>
+          <span>$13.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Flautas de Pollo <span class="note">(2 per order)</span></h3>
+          <p>Topped with sour cream, cotija, salsa verde, salsa roja.</p>
+          <span>$10.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Sopa de Tortilla</h3>
+          <p>With grilled chicken, tortilla strips, Oaxaca cheese, guajillo chiles.</p>
+          <span>$10.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Queso Fundido con Chorizo</h3>
+          <p>Oaxaca & Chihuahua cheeses with chorizo and tomatillo serrano salsa.</p>
+          <span>$14.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Quesadillas</h3>
+          <p>10" flour tortilla with Chihuahua cheese + choice of filling.</p>
+          <span>$14.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Nachos</h3>
+          <p>Layered chips with protein, black beans, Chihuahua cheese, pico de gallo.</p>
+          <span>$14.95</span>
+        </article>
+      </div>
+      <p class="menu-footnote">Quesadilla fillings: chicharrón, hongos, steak, pollo. Nacho proteins: steak, hongos, chorizo, pollo.</p>
     </section>
 
     <section class="menu-block reveal" data-delay="0" id="entrees">
@@ -220,6 +229,7 @@
         <h2>Entrees</h2>
         <p>Served with a side of house rice and beans.</p>
       </div>
+      <div class="section-hero" aria-hidden="true">Hero image coming soon</div>
       <div class="menu-grid">
         <article class="menu-item">
           <h3>Enchiladas Suizas</h3>
@@ -247,38 +257,32 @@
           <span>$24.95</span>
         </article>
       </div>
-      <div class="photo-strip">
-        <div class="photo-placeholder">Food image coming soon</div>
-        <div class="photo-placeholder">Food image coming soon</div>
-      </div>
     </section>
 
-    <section class="menu-block split reveal" data-delay="80" id="fajitas">
-      <div>
-        <div class="menu-block__header">
-          <h2>Fajitas</h2>
-          <p>Sauteed bell peppers and onions, served with flour tortillas, rice, beans.</p>
-        </div>
-        <div class="menu-grid">
-          <article class="menu-item">
-            <h3>Shrimp Fajita</h3>
-            <span>$23.95</span>
-          </article>
-          <article class="menu-item">
-            <h3>Steak</h3>
-            <span>$23.95</span>
-          </article>
-          <article class="menu-item">
-            <h3>Pollo Fajita</h3>
-            <span>$21.95</span>
-          </article>
-          <article class="menu-item">
-            <h3>Vegetales</h3>
-            <span>$20.95</span>
-          </article>
-        </div>
+    <section class="menu-block reveal" data-delay="80" id="fajitas">
+      <div class="menu-block__header">
+        <h2>Fajitas</h2>
+        <p>Sauteed bell peppers and onions, served with flour tortillas, rice, beans.</p>
       </div>
-      <div class="photo-placeholder tall">Food image coming soon</div>
+      <div class="section-hero" aria-hidden="true">Hero image coming soon</div>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <h3>Shrimp Fajita</h3>
+          <span>$23.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Steak</h3>
+          <span>$23.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Pollo Fajita</h3>
+          <span>$21.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Vegetales</h3>
+          <span>$20.95</span>
+        </article>
+      </div>
     </section>
 
     <section class="menu-block reveal" data-delay="0" id="burritos">
@@ -286,6 +290,7 @@
         <h2>Burritos <span>$15.95</span></h2>
         <p>Rice, beans, romaine lettuce, pico de gallo, salsa, crema, cotija.</p>
       </div>
+      <div class="section-hero" aria-hidden="true">Hero image coming soon</div>
       <div class="menu-grid compact">
         <article class="menu-item"><h3>Pastor</h3></article>
         <article class="menu-item"><h3>Camarón</h3></article>
@@ -300,6 +305,7 @@
         <h2>Tortas <span>$15.95</span></h2>
         <p>Toasted Portuguese roll with chipotle mayo, black beans, avocado, Chihuahua cheese.</p>
       </div>
+      <div class="section-hero" aria-hidden="true">Hero image coming soon</div>
       <div class="menu-grid compact">
         <article class="menu-item"><h3>Pastor</h3></article>
         <article class="menu-item"><h3>Pollo</h3></article>
@@ -308,32 +314,30 @@
       </div>
     </section>
 
-    <section class="menu-block split reveal" data-delay="80" id="sides">
-      <div>
-        <div class="menu-block__header">
-          <h2>Sides</h2>
-          <p>Little extras to round out the table.</p>
-        </div>
-        <div class="menu-grid compact">
-          <article class="menu-item">
-            <h3>Pico de Gallo</h3>
-            <span>$9.95</span>
-          </article>
-          <article class="menu-item">
-            <h3>Chile Seasoned Fries</h3>
-            <span>$9.95</span>
-          </article>
-          <article class="menu-item">
-            <h3>Plátanos Fritos</h3>
-            <span>$9.95</span>
-          </article>
-          <article class="menu-item">
-            <h3>Rice or Beans</h3>
-            <span>$4.00</span>
-          </article>
-        </div>
+    <section class="menu-block reveal" data-delay="80" id="sides">
+      <div class="menu-block__header">
+        <h2>Sides</h2>
+        <p>Little extras to round out the table.</p>
       </div>
-      <div class="photo-placeholder tall">Food image coming soon</div>
+      <div class="section-hero" aria-hidden="true">Hero image coming soon</div>
+      <div class="menu-grid compact">
+        <article class="menu-item">
+          <h3>Pico de Gallo</h3>
+          <span>$9.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Chile Seasoned Fries</h3>
+          <span>$9.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Plátanos Fritos</h3>
+          <span>$9.95</span>
+        </article>
+        <article class="menu-item">
+          <h3>Rice or Beans</h3>
+          <span>$4.00</span>
+        </article>
+      </div>
     </section>
 
     <section class="menu-block reveal" data-delay="0" id="desserts">
@@ -341,6 +345,7 @@
         <h2>Desserts <span>$9.95</span></h2>
         <p>Sweet finishes straight from the kitchen.</p>
       </div>
+      <div class="section-hero" aria-hidden="true">Hero image coming soon</div>
       <div class="menu-grid compact">
         <article class="menu-item"><h3>Tres Leches</h3></article>
         <article class="menu-item"><h3>Flan</h3></article>

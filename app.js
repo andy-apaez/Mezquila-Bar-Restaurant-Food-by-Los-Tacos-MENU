@@ -41,12 +41,20 @@ const toggleMenu = (isOpen) => {
   document.body.classList.toggle("menu-open", isOpen);
 };
 
+const handleHaptics = () => {
+  if (navigator.vibrate) {
+    navigator.vibrate(10);
+  }
+};
+
 if (menuTrigger && menuOverlay) {
   menuTrigger.addEventListener("click", () => toggleMenu(true));
+  menuTrigger.addEventListener("pointerdown", handleHaptics);
 }
 
 if (menuClose) {
   menuClose.addEventListener("click", () => toggleMenu(false));
+  menuClose.addEventListener("pointerdown", handleHaptics);
 }
 
 if (menuOverlay) {
@@ -65,6 +73,7 @@ menuButtons.forEach((button) => {
       target.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   });
+  button.addEventListener("pointerdown", handleHaptics);
 });
 
 document.addEventListener("keydown", (event) => {
@@ -72,6 +81,61 @@ document.addEventListener("keydown", (event) => {
     toggleMenu(false);
   }
 });
+
+const stickyNav = document.querySelector(".sticky-nav");
+const menuJump = document.querySelector(".menu-jump");
+const stickyButtons = document.querySelectorAll(".sticky-nav button");
+let lastScrollY = window.scrollY;
+let isTicking = false;
+
+const handleStickyScroll = () => {
+  const currentY = window.scrollY;
+  const shouldHide = currentY > lastScrollY && currentY > 120;
+  if (stickyNav) {
+    stickyNav.classList.toggle("is-hidden", shouldHide);
+  }
+  if (menuJump) {
+    menuJump.classList.toggle("is-hidden", shouldHide);
+  }
+  lastScrollY = currentY;
+  isTicking = false;
+};
+
+window.addEventListener("scroll", () => {
+  if (!isTicking) {
+    window.requestAnimationFrame(handleStickyScroll);
+    isTicking = true;
+  }
+});
+
+stickyButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const target = document.querySelector(button.dataset.target);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
+  button.addEventListener("pointerdown", handleHaptics);
+});
+
+document.querySelectorAll(".menu-item").forEach((item) => {
+  item.addEventListener("pointerdown", handleHaptics);
+});
+
+const priceElements = document.querySelectorAll(".menu-item span, .menu-block__header h2 span");
+const updatePriceFormatting = () => {
+  const hideDollar = window.matchMedia("(max-width: 720px)").matches;
+  priceElements.forEach((el) => {
+    if (!el.textContent.includes("$")) return;
+    if (!el.dataset.originalPrice) {
+      el.dataset.originalPrice = el.textContent;
+    }
+    el.textContent = hideDollar ? el.dataset.originalPrice.replace("$", "") : el.dataset.originalPrice;
+  });
+};
+
+updatePriceFormatting();
+window.addEventListener("resize", updatePriceFormatting);
 
 const qrInput = document.querySelector("#qr-input");
 const qrButton = document.querySelector("#qr-generate");
