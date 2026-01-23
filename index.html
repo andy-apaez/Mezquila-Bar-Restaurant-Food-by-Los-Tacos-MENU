@@ -17,9 +17,10 @@
     </button>
   </div>
   <header class="hero">
-    <div class="hero__content">
+    <div class="hero__content reveal" data-delay="0">
       <p class="eyebrow">Food by Los Tacos · IG: <a href="https://www.instagram.com/lostacosbk/">@lostacosbk</a></a></p>
       <h1 class="handwrite-title">Mezquila Bar & Restaurant</h1>
+      <div class="brand-divider" aria-hidden="true"></div>
       <h2 class="menu-title">
         Food <span>Menu</span>
       </h2>
@@ -29,13 +30,19 @@
         <span>Slow-braised meats</span>
         <span>Coastal mariscos</span>
       </div>
+      <div class="scroll-cue" aria-hidden="true">
+        <span>Scroll to explore the menu</span>
+        <span class="scroll-cue__arrow">↓</span>
+      </div>
     </div>
     <div class="hero__frames">
       <figure class="frame reveal" data-delay="0">
-        <img src="Timages/birria.png" alt="Menu page one" />
+        <img src="Images/tacocircle.png" alt="Menu page one" />
+        <figcaption>House Favorites</figcaption>
       </figure>
       <figure class="frame reveal" data-delay="120">
-        <img src="Timages/menu-page-2.jpg" alt="Menu page two" />
+        <img src="Images/aguachile.PNG" alt="Menu page two" />
+        <figcaption>Behind the Bar</figcaption>
       </figure>
     </div>
   </header>
@@ -139,7 +146,7 @@
         <p>Coastal flavors with bright lime, serrano, and cilantro.</p>
       </div>
       <figure class="section-hero">
-        <img src="Images/ChatGPT%20Image%20Jan%2022,%202026,%2003_33_03%20AM.png" alt="Mariscos platter with lime and herbs" />
+        <img src="Images/aguachile.PNG" alt="Mariscos tostada with lime and herbs" />
       </figure>
       <div class="menu-grid">
         <article class="menu-item">
@@ -180,8 +187,8 @@
         <h2>Appetizers</h2>
         <p>Perfect to share while the mezcal pours.</p>
       </div>
-      <figure class="section-hero">
-        <img src="Images/burrito.png" alt="Burrito with salsa and crema" />
+      <figure class="section-hero section-hero--top">
+        <img src="Images/nachos.PNG" alt="Nachos layered with cheese and toppings" />
       </figure>
       <div class="menu-grid">
         <article class="menu-item">
@@ -223,7 +230,9 @@
         <h2>Entrees</h2>
         <p>Served with a side of house rice and beans.</p>
       </div>
-      <div class="section-hero" aria-hidden="true">Hero image coming soon</div>
+      <figure class="section-hero section-hero--top">
+        <img src="Images/enchiladas.PNG" alt="Enchiladas plated with sauce and crema" />
+      </figure>
       <div class="menu-grid">
         <article class="menu-item">
           <h3>Enchiladas Suizas</h3>
@@ -258,7 +267,9 @@
         <h2>Fajitas</h2>
         <p>Sauteed bell peppers and onions, served with flour tortillas, rice, beans.</p>
       </div>
-      <div class="section-hero" aria-hidden="true">Hero image coming soon</div>
+      <figure class="section-hero">
+        <img src="Images/fajitas.png" alt="Fajitas platter with peppers and onions" />
+      </figure>
       <div class="menu-grid">
         <article class="menu-item">
           <h3>Shrimp Fajita</h3>
@@ -284,7 +295,9 @@
         <h2>Burritos <span>$15.95</span></h2>
         <p>Rice, beans, romaine lettuce, pico de gallo, salsa, crema, cotija.</p>
       </div>
-      <div class="section-hero" aria-hidden="true">Hero image coming soon</div>
+      <figure class="section-hero section-hero--top">
+        <img src="Images/burrito.png" alt="Burrito with salsa and crema" />
+      </figure>
       <div class="menu-grid compact">
         <article class="menu-item"><h3>Pastor</h3></article>
         <article class="menu-item"><h3>Camarón</h3></article>
@@ -299,7 +312,9 @@
         <h2>Tortas <span>$15.95</span></h2>
         <p>Toasted Portuguese roll with chipotle mayo, black beans, avocado, Chihuahua cheese.</p>
       </div>
-      <div class="section-hero" aria-hidden="true">Hero image coming soon</div>
+      <figure class="section-hero">
+        <img src="Images/torta.PNG" alt="Tortas with fresh toppings" />
+      </figure>
       <div class="menu-grid compact">
         <article class="menu-item"><h3>Pastor</h3></article>
         <article class="menu-item"><h3>Pollo</h3></article>
@@ -313,7 +328,6 @@
         <h2>Sides</h2>
         <p>Little extras to round out the table.</p>
       </div>
-      <div class="section-hero" aria-hidden="true">Hero image coming soon</div>
       <div class="menu-grid compact">
         <article class="menu-item">
           <h3>Pico de Gallo</h3>
@@ -339,7 +353,6 @@
         <h2>Desserts <span>$9.95</span></h2>
         <p>Sweet finishes straight from the kitchen.</p>
       </div>
-      <div class="section-hero" aria-hidden="true">Hero image coming soon</div>
       <div class="menu-grid compact">
         <article class="menu-item"><h3>Tres Leches</h3></article>
         <article class="menu-item"><h3>Flan</h3></article>
@@ -347,20 +360,38 @@
       </div>
     </section>
 
-    <section class="menu-block qr-block reveal" data-delay="0" id="qr">
+    <section class="menu-block contact-block reveal" data-delay="0" id="contact">
       <div class="menu-block__header">
-        <h2>Share the Menu</h2>
-        <p>Generate a QR code for this menu or any link you want to share.</p>
+        <h2>Find Us</h2>
+        <p>Follow along or reach us directly.</p>
       </div>
-      <div class="qr-generator">
-        <label for="qr-input">Link or text</label>
-        <div class="qr-generator__controls">
-          <input id="qr-input" type="text" placeholder="mezquila-bar-restaurant-food-by-los.vercel.app" />
-          <button type="button" id="qr-generate">Generate QR</button>
+      <div class="contact-list">
+        <a class="contact-item" href="https://www.instagram.com/lostacosbk/" target="_blank" rel="noopener">
+          <span class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M16.5 3.5h-9a4 4 0 0 0-4 4v9a4 4 0 0 0 4 4h9a4 4 0 0 0 4-4v-9a4 4 0 0 0-4-4Zm-4.5 5.2a3.8 3.8 0 1 1 0 7.6 3.8 3.8 0 0 1 0-7.6Zm5.1-.9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-5.1 1.9a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6Z" />
+            </svg>
+          </span>
+          <span class="contact-label">Instagram</span>
+          <span class="contact-value">@lostacosbk</span>
+        </a>
+        <div class="contact-item">
+          <span class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2.5c-3.4 0-6.1 2.7-6.1 6.1 0 4.6 5.2 10.7 5.4 11a0.9 0.9 0 0 0 1.4 0c.2-.3 5.4-6.4 5.4-11 0-3.4-2.7-6.1-6.1-6.1Zm0 8.4a2.3 2.3 0 1 1 0-4.6 2.3 2.3 0 0 1 0 4.6Z" />
+            </svg>
+          </span>
+          <span class="contact-label">Address</span>
+          <span class="contact-value">634 4th Ave, Brooklyn, NY 11232</span>
         </div>
-        <div class="qr-preview" aria-live="polite">
-          <img id="qr-image" alt="QR code preview" />
-          <p class="qr-hint">Enter a link above to preview a QR code.</p>
+        <div class="contact-item">
+          <span class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.6 3.7c.6 0 1.1.4 1.3 1l.9 2.7c.2.6 0 1.2-.4 1.6l-1.6 1.5c1 2 2.6 3.7 4.6 4.6l1.5-1.6c.4-.4 1-.6 1.6-.4l2.7.9c.6.2 1 .7 1 1.3v2.6c0 .8-.6 1.4-1.4 1.4A14.5 14.5 0 0 1 4 6.6c0-.8.6-1.4 1.4-1.4h2.2Z" />
+            </svg>
+          </span>
+          <span class="contact-label">Phone</span>
+          <span class="contact-value">(347) 227-8981</span>
         </div>
       </div>
     </section>
