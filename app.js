@@ -4,7 +4,7 @@ itemGroups.forEach((grid) => {
   const items = grid.querySelectorAll(".menu-item");
   items.forEach((item, index) => {
     item.classList.add("reveal");
-    item.style.setProperty("--delay", `${index * 80}ms`);
+    item.style.setProperty("--delay", `${index * 50}ms`);
   });
 });
 
@@ -235,7 +235,7 @@ if (langToggle) {
     toggleSpanish(isSpanish);
 
     translateTextNodes(document.querySelectorAll(".menu-jump__text"), {
-      Sections: "Secciones"
+      Menu: "Menú"
     });
     translateTextNodes(document.querySelectorAll(".scroll-cue span:first-child"), {
       "Scroll to explore the menu": "Desplázate para explorar el menú"
