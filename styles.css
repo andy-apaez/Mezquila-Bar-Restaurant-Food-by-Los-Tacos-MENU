@@ -590,33 +590,22 @@ main > .menu-block:nth-of-type(even) {
   aspect-ratio: 16 / 7;
   border-radius: 22px;
   border: 1px solid rgba(196, 123, 59, 0.25);
-  background:
-    linear-gradient(0deg, rgba(35, 26, 22, 0.2), rgba(35, 26, 22, 0.2)),
-    #f1e1cc,
-    linear-gradient(130deg, rgba(196, 123, 59, 0.25), rgba(110, 143, 90, 0.22)),
-    linear-gradient(0deg, rgba(35, 26, 22, 0.25), rgba(35, 26, 22, 0.25));
-  color: rgba(255, 245, 232, 0.8);
-  display: grid;
-  place-items: center;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 0.7rem;
   overflow: hidden;
+  background: #f1e1cc;
 }
 
 .section-hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(35, 26, 22, 0.35);
-  backdrop-filter: blur(3px);
+  background: rgba(35, 26, 22, 0.25);
 }
 
 .section-hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(255, 235, 210, 0.3), transparent 55%);
+  background: radial-gradient(circle at 20% 20%, rgba(255, 235, 210, 0.25), transparent 55%);
   opacity: 0.5;
 }
 
@@ -629,13 +618,22 @@ main > .menu-block:nth-of-type(even) {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: contain;
-  object-position: center 60%;
-  background: rgba(35, 26, 22, 0.18);
+  object-fit: cover;
+  object-position: 50% 70%;
 }
 
 .section-hero--top img {
-  object-position: center 35%;
+  object-position: 50% 35%;
+}
+
+.section-hero--contain {
+  background: #f1e1cc;
+}
+
+.section-hero--contain img {
+  object-fit: contain;
+  object-position: 50% 50%;
+  background: none;
 }
 
 .photo-strip {
@@ -893,7 +891,7 @@ main > .menu-block:nth-of-type(even) {
   letter-spacing: 0.02em;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 900px) {
   .hero {
     padding: 3.5rem 6vw 3rem;
     gap: 2rem;
@@ -972,13 +970,13 @@ main > .menu-block:nth-of-type(even) {
   }
 
   .section-hero img {
-    object-fit: contain;
-    object-position: center;
+    object-fit: cover;
+    object-position: 50% 65%;
   }
 
 }
 
-@media (max-width: 520px) {
+@media (max-width: 600px) {
   :root {
     --top-bar-height: 52px;
   }
@@ -1028,8 +1026,8 @@ main > .menu-block:nth-of-type(even) {
   }
 
   .section-hero img {
-    object-fit: contain;
-    object-position: center;
+    object-fit: cover;
+    object-position: 50% 60%;
   }
 }
 
