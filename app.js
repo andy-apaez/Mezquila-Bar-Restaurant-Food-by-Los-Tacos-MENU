@@ -296,3 +296,64 @@ const updatePriceFormatting = () => {
 
 updatePriceFormatting();
 window.addEventListener("resize", updatePriceFormatting);
+
+const palettes = [
+  {
+    name: "Candlelit Taqueria",
+    vars: {
+      "--cream": "#D9C3A1",
+      "--sand": "#B68D40",
+      "--clay": "#5A3324",
+      "--ink": "#120D0A",
+      "--espresso": "#120D0A",
+      "--charcoal": "#120D0A",
+      "--chili": "#8B4A2B",
+      "--amber": "#B68D40",
+      "--avocado": "#5A3324",
+      "--paper": "#F5EFE6",
+      "--card": "#F5EFE6",
+      "--card-alt": "#D9C3A1",
+      "--muted": "rgba(245, 239, 230, 0.72)",
+      "--smoke": "rgba(18, 13, 10, 0.35)",
+      "--bg-top": "rgba(18, 13, 10, 0.92)",
+      "--bg-mid": "rgba(18, 13, 10, 0.95)",
+      "--bg-deep": "rgba(18, 13, 10, 0.98)",
+      "--hero-paper-1": "rgba(245, 239, 230, 0.78)",
+      "--hero-paper-2": "rgba(217, 195, 161, 0.72)",
+      "--hero-paper-3": "rgba(182, 141, 64, 0.62)",
+      "--hero-paper-solid": "rgba(245, 239, 230, 0.92)",
+      "--topbar-bg": "rgba(18, 13, 10, 0.55)",
+      "--topbar-border": "rgba(182, 141, 64, 0.3)",
+      "--menu-item-bg": "#D9C3A1",
+      "--menu-item-border": "rgba(182, 141, 64, 0.45)",
+      "--menu-block-bg": "#2E1F18",
+      "--menu-block-alt": "#5A3324",
+      "--menu-block-border": "rgba(139, 74, 43, 0.55)",
+      "--menu-block-shadow": "0 16px 34px rgba(18, 13, 10, 0.28)",
+      "--stripe-warm": "rgba(139, 74, 43, 0.08)",
+      "--stripe-cool": "rgba(182, 141, 64, 0.08)",
+      "--section-hero-bg": "#5A3324",
+      "--section-hero-overlay": "rgba(18, 13, 10, 0.25)",
+      "--section-hero-glow": "rgba(245, 239, 230, 0.25)",
+      "--photo-placeholder-grad-1": "rgba(139, 74, 43, 0.1)",
+      "--photo-placeholder-grad-2": "rgba(182, 141, 64, 0.18)",
+      "--photo-placeholder-border": "rgba(182, 141, 64, 0.6)",
+      "--footer-text": "rgba(245, 239, 230, 0.7)"
+    }
+  }
+];
+
+const applyPalette = (index) => {
+  const palette = palettes[index];
+  if (!palette) return;
+  Object.entries(palette.vars).forEach(([key, value]) => {
+    document.documentElement.style.setProperty(key, value);
+  });
+  const creamText = "#F3E9D2";
+  const creamMuted = "rgba(243, 233, 210, 0.72)";
+  document.documentElement.style.setProperty("--ink", creamText);
+  document.documentElement.style.setProperty("--paper", creamText);
+  document.documentElement.style.setProperty("--muted", creamMuted);
+};
+
+applyPalette(0);
